@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age calculater</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./scrpit.js" defer></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <h1 class="Age_calculater">Check Your Exact Age</h1>
+            <p class="text">Discover how old you are in years, months, and days — instantly!</p>
+        </div>
+        <div class="calculter_part">
+            <div class="user_input">
+                <form method="post" class="form">
+                    <label for="day" id="user_day">Day</label> <br>
+                    <div class="userform_input">
+                        <input type="text" id="day" name="day" min="1" maxlength="2" required placeholder="DD"
+                            oninput="this.value = this.value.replace(/\D+/g, '')">
+                        <input type="text" id="month" name="month" min="1" maxlength="2" required placeholder="MM"
+                            oninput="this.value = this.value.replace(/\D+/g, '')">
+                        <input type="text" id="year" name="year" maxlength="4" placeholder="YYYY" pattern="[0-9]{4}"
+                            title="Enter a 4-digit year" required
+                            oninput="this.value = this.value.replace(/\D+/g, '').slice(0,4)">
+                    </div>
+                    <div class="form_current">
+                        <div class="current_day">
+                            <p>Compare with today’s date</p>
+                            <input type="date" id="curent_date" disabled>
+                        </div>
+
+
+                        <div class="buttons">
+                            <button type="reset" class="reset">Reset</button>
+                            <button type="submit" class="submit">Calculate</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="calculate_date">
+                <div class="user_age">
+                    <span>YOUR AGE IS</span>
+                    <div class="age change">--</div>
+                    <p>year</p>
+                </div>
+                <div class="ydm">
+                    <div class="number">
+                        <button class="day change">--</button>
+                        <p class="change">Day</p>
+                    </div>
+                    <div class="number">
+                        <button class="month change">--</button>
+                        <p class="change">Month</p>
+                    </div>
+                    <div class="number">
+                        <button class="year change">--</button>
+                        <p class="change">Year</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>/
